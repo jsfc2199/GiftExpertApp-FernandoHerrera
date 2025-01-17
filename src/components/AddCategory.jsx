@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-export const AddCategory = () => {
-  const [inputValue, setInputValue] = useState("one punch");
+// eslint-disable-next-line react/prop-types
+export const AddCategory = ({ setCategories }) => {
+  const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (event) => {
     setInputValue(event.target.value);
@@ -9,6 +10,12 @@ export const AddCategory = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+
+    if (inputValue.trim().length <= 1) return;
+
+    //usamos el callback para tener las categorias actuales
+    setCategories((categories) => [inputValue, ...categories]);
+    setInputValue("");
   };
 
   //onChange: metodo para detectar cambios en inputs

@@ -16,9 +16,9 @@ export const GiftExpertApp = () => {
   return (
     <>
       <h1>Gift App</h1>
-      <AddCategory/>
+      {/* mandamos una prop al add category, en este caso mandamos la referencia a la funcion */}
+      <AddCategory setCategories={setCategories}/>
       <ol>
-        <button onClick={onAddCategory}>Add Category</button>
         {/* usamos una expresion de js en llaves */}
         {categories.map((category) => {
           return <li key={category}>{category}</li>;
