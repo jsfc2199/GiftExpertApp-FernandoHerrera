@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 ## Configuracion pruebas unitarias
 npm install --save-dev jest @types/jest babel-jest @babel/core @babel/preset-env whatwg-fetch
 npm install --save-dev @testing-library/react jest-environment-jsdom @babel/preset-react
+
+## instalar proptypes
+npm install prop-types
