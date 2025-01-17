@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getGifts } from "../helpers/getGifts";
+import { GiftItem } from "./GiftItem";
 
 // eslint-disable-next-line react/prop-types
 export const GiftGrid = ({ category }) => {
@@ -31,8 +32,10 @@ export const GiftGrid = ({ category }) => {
     <>
       <h3>{category}</h3>
       <ol>
-        {images.map((id, title) => {
-          return <li key={id}>{title} </li>;
+        
+        {images.map((img) => {
+            //con ...img esparcimos todas las propiedades de la imagen a los props del componente
+          return <GiftItem key={img.id} {...img}/>;
         })}
       </ol>
     </>
