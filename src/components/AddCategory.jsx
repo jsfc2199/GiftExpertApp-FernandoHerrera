@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-// eslint-disable-next-line react/prop-types
+
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -24,8 +24,9 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   //onChange: metodo para detectar cambios en inputs
+  //agregamos aria-label para las pruebas unitarias del formulario como tal
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
+    <form onSubmit={(event) => onSubmit(event)} aria-label="form">
       <input
         type="text"
         placeholder="Buscar Gifts"
