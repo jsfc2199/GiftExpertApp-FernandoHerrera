@@ -3,7 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GiftGrid } from "./components/GiftGrid";
 
 export const GiftExpertApp = () => {
-  // const apiKey = "AvcdGeNzW40xzmpObLOlBeUE3mFU67k3";
+  
 
   //listado persistente usando useState
   //lo inicializamos con un valor, en este caso un arreglo
