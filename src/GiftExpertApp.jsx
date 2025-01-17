@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
 
 export const GiftExpertApp = () => {
   // const apiKey = "AvcdGeNzW40xzmpObLOlBeUE3mFU67k3";
@@ -15,6 +16,7 @@ export const GiftExpertApp = () => {
   return (
     <>
       <h1>Gift App</h1>
+      <AddCategory/>
       <ol>
         <button onClick={onAddCategory}>Add Category</button>
         {/* usamos una expresion de js en llaves */}
