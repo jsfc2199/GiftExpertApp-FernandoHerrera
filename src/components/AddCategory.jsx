@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (event) => {
@@ -14,7 +14,11 @@ export const AddCategory = ({ setCategories }) => {
     if (inputValue.trim().length <= 1) return;
 
     //usamos el callback para tener las categorias actuales
-    setCategories((categories) => [inputValue, ...categories]);
+    // setCategories((categories) => [inputValue, ...categories]); 
+
+    //lo anterior valido pero lo haremos solo emitiendo el valor
+    onNewCategory(inputValue.trim()) //emitimos el valor
+
     setInputValue("");
   };
 
