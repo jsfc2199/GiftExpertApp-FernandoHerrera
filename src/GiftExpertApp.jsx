@@ -11,6 +11,7 @@ export const GiftExpertApp = () => {
   //Desestructuramos para romper la relacion y retornar un arreglo nuevo
   //Modificamos para que el add category se encargue solo de emitir un valor y sea el padre el que maneje el estado
   const onAddCategory = (newCategory) => {
+    if (categories.includes(newCategory)) return;
     setCategories([newCategory, ...categories]);
   };
 
@@ -18,9 +19,9 @@ export const GiftExpertApp = () => {
     <>
       <h1>Gift App</h1>
       {/* mandamos una prop al add category, en este caso mandamos la referencia a la funcion */}
-      <AddCategory 
-      // setCategories={setCategories}
-      onNewCategory={event => onAddCategory(event)}
+      <AddCategory
+        // setCategories={setCategories}
+        onNewCategory={(event) => onAddCategory(event)}
       />
       <ol>
         {/* usamos una expresion de js en llaves */}
