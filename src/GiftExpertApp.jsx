@@ -7,7 +7,7 @@ export const GiftExpertApp = () => {
 
   //listado persistente usando useState
   //lo inicializamos con un valor, en este caso un arreglo
-  const [categories, setCategories] = useState(["One Punch"]);
+  const [categories, setCategories] = useState([]);
 
   //Desestructuramos para romper la relacion y retornar un arreglo nuevo
   //Modificamos para que el add category se encargue solo de emitir un valor y sea el padre el que maneje el estado
