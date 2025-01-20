@@ -1,6 +1,7 @@
 
 import { GiftItem } from "./GiftItem";
 import { useFetchGits } from "../hooks/useFetchGifts";
+import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
 export const GiftGrid = ({ category }) => {
@@ -47,3 +48,7 @@ export const GiftGrid = ({ category }) => {
     </>
   );
 };
+
+GiftGrid.propTypes = {
+  category: PropTypes.string.isRequired
+}
